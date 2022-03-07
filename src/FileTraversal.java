@@ -40,8 +40,7 @@ public class FileTraversal {
 			System.out.println("File not found");
 		}
 	}
-	
-	
+
 	public static int count(File directory) {
 		int count = 0;
 		if (directory.isDirectory()) {
@@ -55,13 +54,13 @@ public class FileTraversal {
 				if (directory.isDirectory()) {
 					count++;
 					count += count(contentsInFolder[i]);
-				}else {
+				} else {
 					System.out.println("File not found");
 					return 0;
+				}
 			}
-		} 	
 		}
 		return count;
-		
+
 	}
 }
